@@ -8,7 +8,7 @@
         .latitude}%2C${position.coords.longitude}`;
       document.getElementById('coordinates')
         .innerHTML =
-        `<div class="col s12 m6">${userPosition}</div> <div class="col s12 m6>${mapLink}</div>`;
+        `<div class="col s12 m6">${userPosition}</div> <div class="col s12 m6">${mapLink}</div>`;
     }, () => {
       document.getElementById('coordinates')
         .innerText = 'Error locating your device';
