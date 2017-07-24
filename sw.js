@@ -52,12 +52,12 @@ var __wpo = {
     "805db6e929e98fd3deb05cdb2935fc5a33183c15": "./img/asterisk.svg",
     "198f591c1f8640cde2abf40fe49d445650089498": "./img/lansstyrelsen.svg",
     "6704b83793b0f7692c98e616873e05e9a4c3e9d7": "./img/regionSkane.svg",
-    "f5bc66abe2e8f92d2411ac1605ec604fd2a9354c": "./bundle.js",
-    "fb1e605f3063748d8b6762e1d975af287814e4ba": "./main.css"
+    "bdb109cf5c4856ed94c696a13033d46a61252dc0": "./bundle.js",
+    "773f881d32c4af28374983b6370fe4b6e430ba98": "./main.css"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-7-24 13:27:38",
+  "version": "2017-7-24 14:15:41",
   "name": "webpack-offline",
   "pluginVersion": "4.8.3",
   "relativePaths": true
