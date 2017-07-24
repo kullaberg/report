@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2017-7-24 13:25:27
+#ver:2017-7-24 13:27:38
 #plugin:4.8.3
 
 CACHE:
@@ -18,8 +18,6 @@ CACHE:
 ../fonts/roboto/Roboto-Regular.woff2
 ../fonts/roboto/Roboto-Thin.woff
 ../fonts/roboto/Roboto-Thin.woff2
-../embedEn.html
-../embedSv.html
 ../
 ../img/asterisk.svg
 ../img/lansstyrelsen.svg

@@ -1,6 +1,4 @@
 require('./indexB.html');
-require('./embedEnB.html');
-require('./embedSvB.html');
 require('./css/materialize.css');
 require('./css/materialdesignicons.css');
 require('./css/master.css');
