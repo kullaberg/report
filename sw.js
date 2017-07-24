@@ -48,7 +48,7 @@ var __wpo = {
     "c193deaa915e7183828400922700567900fb6cc3": "./fonts/roboto/Roboto-Regular.woff2",
     "cb8f61464f349af887ba96f6a2ae1e318b3cc8d9": "./fonts/roboto/Roboto-Thin.woff",
     "c321aeb611cf1dcb25717484a4ced717d8ca76fa": "./fonts/roboto/Roboto-Thin.woff2",
-    "0a0c017d0b8058fa169f7ce94d68e6c282914e35": "./",
+    "6711d66ecfa94af9ded388eb8e81db8b7a6fceb9": "./",
     "805db6e929e98fd3deb05cdb2935fc5a33183c15": "./img/asterisk.svg",
     "198f591c1f8640cde2abf40fe49d445650089498": "./img/lansstyrelsen.svg",
     "6704b83793b0f7692c98e616873e05e9a4c3e9d7": "./img/regionSkane.svg",
@@ -57,7 +57,7 @@ var __wpo = {
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-7-24 15:59:31",
+  "version": "2017-7-24 16:06:41",
   "name": "webpack-offline",
   "pluginVersion": "4.8.3",
   "relativePaths": true
