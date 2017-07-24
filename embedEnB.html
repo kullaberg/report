@@ -65,7 +65,7 @@
 -->
   <header class="navbar z-depth-2">
     <nav class="blue darken-4" role="navigation">
-      <div class="nav-wrapper"> <a class="brand-logo" href="embedEn.html"><span class="kullaberg"><img class="left logoImg responsive-img turn" src="img/asterisk.svg" alt="Kullaberg" />Kullaberg</span></a>        </div>
+      <div class="nav-wrapper"> <a class="brand-logo" href="embedEn.html"><span class="kullaberg"><img class="left logoImg responsive-img turn" src="img/asterisk.svg" alt="Kullaberg" />Kullaberg Report</span></a>        </div>
     </nav>
   </header>
   <!--		
@@ -82,9 +82,21 @@
 ██  ██  ██ ██   ██ ██ ██  ██ ██
 ██      ██ ██   ██ ██ ██   ████
 -->
-  <div class="main">
-    <section> <label for="name">Your name</label> <input type="text" id="fTel"> </section>
-    <p>Capture Image: <input type="file" accept="image/*" id="capture" capture="camera">      <label for="fTel">Telephone</label> <input type="tel" id="fTel"> </section>
+  <div class="main row">
+    <section class="col s12 m6 section"> <label for="textarea1">Your Report</label><textarea id="textarea1" class="materialize-textarea"
+        data-length="360"></textarea></section>
+    <section class="col s12 m6 section">
+      <p class="col s12"> <label for="capture1">Capture Image Front: </label><input type="file"
+          accept="image/*" id="capture1" capture="camera"> </p>
+      <p class="col s12">
+      <label for="capture2">Capture Image Side: </label> <input type="file"
+          accept="image/*" id="capture2" capture="camera"> </p>
+      <p class="col s12"><label for="capture3">Capture Image Distance: </label><input type="file"
+          accept="image/*" id="capture3" capture="camera"> </p>
+    </section>
+    <section class="col s12 m6 section" id="coordinates">
+      <p>You have not granted permission for us to locate your position. </p>
+    </section>
   </div>
   <!--
 ███████  ██████   ██████  ████████ ███████ ██████
@@ -93,7 +105,7 @@
 ██      ██    ██ ██    ██    ██    ██      ██   ██
 ██       ██████   ██████     ██    ███████ ██   ██
 -->
-  <footer class="page-footer blue darken-4 white-text trails">
+  <footer class="page-footer blue darken-4 white-text trails footerAbsolute">
     <div class="row footerEmbed">
       <div class="col s12">
         <div class="col s6 m4 l2">Design <br> <a class="orange-text text-lighten-3 modal-trigger" href="#carlos">Carlos Velasco</a>          </div>
@@ -136,15 +148,7 @@
 ███████  ██████ ██   ██ ██ ██         ██
 -->
   <script>
-    navigator.geolocation.getCurrentPosition(function(position) {
-      console.log('Latitude: ' + position.coords.latitude +
-        ', Longitude: ' + position.coords.longitude +
-        ', Altitude: ' + position.coords.altitude);
-    }, function() {
-      console.log('Error locating your device');
-    }, {
-      enableHighAccuracy: true
-    });
+
 
   </script>
 </body>
