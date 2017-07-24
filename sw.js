@@ -24,12 +24,6 @@ var __wpo = {
       "./img/regionSkane.svg",
       "./bundle.js",
       "./main.css",
-      "./android-chrome-192x192.png",
-      "./android-chrome-512x512.png",
-      "./favicon-32x32.png",
-      "./favicon-16x16.png",
-      "./js/init.min.js",
-      "./js/init2.min.js",
       "./js/materialize.min.js",
       "./js/jquery-3.2.1.min.js"
     ],
@@ -37,12 +31,6 @@ var __wpo = {
     "optional": []
   },
   "externals": [
-    "./android-chrome-192x192.png",
-    "./android-chrome-512x512.png",
-    "./favicon-32x32.png",
-    "./favicon-16x16.png",
-    "./js/init.min.js",
-    "./js/init2.min.js",
     "./js/materialize.min.js",
     "./js/jquery-3.2.1.min.js"
   ],
@@ -73,7 +61,7 @@ var __wpo = {
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-7-24 13:23:40",
+  "version": "2017-7-24 13:25:27",
   "name": "webpack-offline",
   "pluginVersion": "4.8.3",
   "relativePaths": true
