@@ -62,18 +62,18 @@ var __wpo = {
     "c193deaa915e7183828400922700567900fb6cc3": "./fonts/roboto/Roboto-Regular.woff2",
     "cb8f61464f349af887ba96f6a2ae1e318b3cc8d9": "./fonts/roboto/Roboto-Thin.woff",
     "c321aeb611cf1dcb25717484a4ced717d8ca76fa": "./fonts/roboto/Roboto-Thin.woff2",
-    "cc68767fa5019cfe57e0a413ede4258e7bc0052d": "./embedEn.html",
+    "4f80259ca363b298fefa465cfafcdd8d806cc165": "./embedEn.html",
     "34fbabe3ddb5411abc4c539934d5f51804ae71d2": "./embedSv.html",
-    "b4f2dc66a09f3689354360d765e45f1fd5f254a1": "./",
+    "1827f974b46e372fe1dd210028f95840d4691e04": "./",
     "805db6e929e98fd3deb05cdb2935fc5a33183c15": "./img/asterisk.svg",
     "198f591c1f8640cde2abf40fe49d445650089498": "./img/lansstyrelsen.svg",
     "6704b83793b0f7692c98e616873e05e9a4c3e9d7": "./img/regionSkane.svg",
-    "65d10881f6dfe0a112ae56e6fb7ba92cc2e472e2": "./bundle.js",
-    "10338074bbb7cceb6b59d9d07152805f3bd42d39": "./main.css"
+    "e1392556fa18497966391bee317abf573bf28a43": "./bundle.js",
+    "fb1e605f3063748d8b6762e1d975af287814e4ba": "./main.css"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-7-24 12:26:47",
+  "version": "2017-7-24 13:23:40",
   "name": "webpack-offline",
   "pluginVersion": "4.8.3",
   "relativePaths": true
