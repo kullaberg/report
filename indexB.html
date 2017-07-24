@@ -70,9 +70,16 @@
 ██      ██ ██   ██ ██ ██   ████
 -->
   <div class="main row">
-    <section class="col s12 m6 section"> <label for="textarea1">Your Report</label><textarea id="textarea1" class="materialize-textarea"
-        data-length="360"></textarea></section>
-    <section class="col s12 m6 section">
+    <div class="">
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-content"> <span class="card-title">Send a Report</span> After you press send
+            your prefered email application will start and you can continue
+            to write up a brief report and attach three images.</div>
+        </div>
+      </div>
+    </div>
+    <!-- <section class="col s12 m6 section">
       <p class="col s12"> <label for="capture1">Capture Image Front: </label><input type="file"
           accept="image/*" id="capture1" capture="camera"> </p>
       <p class="col s12">
@@ -80,64 +87,62 @@
           accept="image/*" id="capture2" capture="camera"> </p>
       <p class="col s12"><label for="capture3">Capture Image Distance: </label><input type="file"
           accept="image/*" id="capture3" capture="camera"> </p>
-    </section>
-    <section id="coordinates">
-      <p>You have not granted permission for us to locate your position. </p>
-    </section>
-  </div>
-  <!--
+    </section> -->
+    <div class="">
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-content"> <span class="card-title">Position</span> <span id="coordinates">
+              You have not granted permission for us to locate your position.
+                </span> </div>
+        </div>
+      </div>
+      <!-- <section class="col s12 m6 section"> <label for="textarea1">Your Report</label><textarea id="textarea1" class="materialize-textarea"></textarea></section> -->
+      <div id="sendButton" class="col s12 center"> </div>
+    </div>
+    <!--
 ███████  ██████   ██████  ████████ ███████ ██████
 ██      ██    ██ ██    ██    ██    ██      ██   ██
 █████   ██    ██ ██    ██    ██    █████   ██████
 ██      ██    ██ ██    ██    ██    ██      ██   ██
 ██       ██████   ██████     ██    ███████ ██   ██
 -->
-  <footer class="page-footer blue darken-4 white-text trails footerAbsolute">
-    <div class="row footerEmbed">
-      <div class="col s12">
-        <div class="col s6 m4 l2">Design <br> <a class="orange-text text-lighten-3 modal-trigger" href="#carlos">Carlos Velasco</a>          </div>
-        <div class="col s6 m4 l2">Sponsors <br> <a class="orange-text text-lighten-3 modal-trigger" href="#skane">Region Skåne</a>          <br> <a class="orange-text text-lighten-3 modal-trigger" href="#lansstyrelsen">Lansstyrelsen Skåne</a>          </div>
-        <div class="col s6 m4 l2">Language <br> <a class="orange-text text-lighten-3" href="embedSv.html">Svenska</a>          <br> <a class="orange-text text-lighten-3">English</a></div>
+    <footer class="page-footer blue darken-4 white-text trails footerAbsolute">
+      <div class="row footerEmbed">
+        <div class="col s12">
+          <div class="col s6 m4 l2">Design <br> <a class="orange-text text-lighten-3 modal-trigger" href="#carlos">Carlos Velasco</a>            </div>
+          <div class="col s6 m4 l2">Sponsors <br> <a class="orange-text text-lighten-3 modal-trigger"
+              href="#skane">Region Skåne</a> <br> <a class="orange-text text-lighten-3 modal-trigger"
+              href="#lansstyrelsen">Lansstyrelsen Skåne</a> </div>
+          <div class="col s6 m4 l2">Language <br> <a class="orange-text text-lighten-3" href="embedSv.html">Svenska</a>            <br> <a class="orange-text text-lighten-3">English</a></div>
+        </div>
       </div>
-    </div>
-  </footer>
-  <!--
+    </footer>
+    <!--
 ███    ███  ██████  ██████   █████  ██
 ████  ████ ██    ██ ██   ██ ██   ██ ██
 ██ ████ ██ ██    ██ ██   ██ ███████ ██
 ██  ██  ██ ██    ██ ██   ██ ██   ██ ██
 ██      ██  ██████  ██████  ██   ██ ███████
 -->
-  <div id="skane" class="modal">
-    <div class="modal-content row center-align"> <img src="img/regionSkane.svg" alt="Region Skane" class="responsive-img"
-      /> </div>
-  </div>
-  <div id="lansstyrelsen" class="modal">
-    <div class="modal-content row center-align"> <img src="img/lansstyrelsen.svg" alt="Lansstyrelsen Skane" class="responsive-img"
-      /> </div>
-  </div>
-  <div id="carlos" class="modal">
-    <div class="modal-content row center-align">
-      <div class="col s12">
-        <h2 class="blue-text text-darken-4">Carlos Velasco</h2>
-        <h4 class="flow-text">Front-End JavaScript Application Developer</h4>
-      </div>
-      <div class="col s12">
-        <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Email: Carlos@2ActiveDesign.com"><i class="mdi mdi-email medium"></i></a>
+    <div id="skane" class="modal">
+      <div class="modal-content row center-align"> <img src="img/regionSkane.svg" alt="Region Skane" class="responsive-img"
+        /> </div>
+    </div>
+    <div id="lansstyrelsen" class="modal">
+      <div class="modal-content row center-align"> <img src="img/lansstyrelsen.svg" alt="Lansstyrelsen Skane" class="responsive-img"
+        /> </div>
+    </div>
+    <div id="carlos" class="modal">
+      <div class="modal-content row center-align">
+        <div class="col s12">
+          <h2 class="blue-text text-darken-4">Carlos Velasco</h2>
+          <h4 class="flow-text">Front-End JavaScript Application Developer</h4>
+        </div>
+        <div class="col s12">
+          <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Email: Carlos@2ActiveDesign.com"><i class="mdi mdi-email medium"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-  <!--
-███████  ██████ ██████  ██ ██████  ████████
-██      ██      ██   ██ ██ ██   ██    ██
-███████ ██      ██████  ██ ██████     ██
-     ██ ██      ██   ██ ██ ██         ██
-███████  ██████ ██   ██ ██ ██         ██
--->
-  <script>
-
-
-  </script>
 </body>
 
 </html>

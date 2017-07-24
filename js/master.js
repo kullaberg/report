@@ -1,17 +1,39 @@
-    navigator.geolocation.getCurrentPosition((position) => {
-      const userPosition =
-        `Latitude ${position.coords.latitude
-        }<br> Longitude ${position.coords.longitude} <br> Altitude ${
-        position.coords.altitude}`;
-      const mapLink =
-        `https://www.google.com/maps/?q=${position.coords
-        .latitude}%2C${position.coords.longitude}`;
-      document.getElementById('coordinates')
-        .innerHTML =
-        `<div class="col s12 m6"><a href=${mapLink}>${userPosition}</a></div>`;
-    }, () => {
-      document.getElementById('coordinates')
-        .innerText = 'Error locating your device';
-    }, {
-      enableHighAccuracy: true,
-    });
+window.test = true;
+//
+navigator.geolocation.getCurrentPosition((position) => {
+  let lat = position.coords.latitude;
+  let long = position.coords.longitude;
+  let alt = position.coords.altitude;
+  const userPosition =
+    `Latitude: ${lat
+        }<br> Longitude: ${long} <br> Altitude: ${
+        alt}`;
+  const mapLink = `https://www.google.com/maps/?q=${lat}%2C${long}`;
+  document.getElementById('coordinates')
+    .innerHTML =
+    `<a target="_blank" href=${mapLink}>${userPosition}</a>`;
+  document.getElementById('sendButton')
+    .innerHTML =
+    `<a class="btn-large white-text blue waves-light" href="mailto:carlos@2activedesign.com?subject = Report&amp;body = <p><a href=${mapLink}>${userPosition}</a> </p><p>Before sending the email, replace this sentence with your report and attach 3 pictures taken with your phone from the front, side and at a distance.">Send</a>`;
+}, () => {
+  document.getElementById('coordinates')
+    .innerText = 'Error locating your device';
+  if (window.test) {
+    lat = 56.301339399999996;
+    long = 12.452367899999999;
+    alt = null;
+    const userPosition =
+      `Latitude: ${lat
+        }<br> Longitude: ${long} <br> Altitude: ${
+        alt}`;
+    const mapLink = `https://www.google.com/maps/?q=${lat}%2C${long}`;
+    document.getElementById('coordinates')
+      .innerHTML =
+      `<a target="_blank" href=${mapLink}>${userPosition}</a>`;
+    document.getElementById('sendButton')
+      .innerHTML =
+      `<a class="btn-large white-text blue waves-light" href="mailto:carlos@2activedesign.com?subject=Report&body=<p><a href=${mapLink}>${userPosition}</a></p><p>Before sending the email, replace this sentence with your report and attach 3 pictures taken with your phone from the front, side and at a distance.</p>">Send</a>`;
+  }
+}, {
+  enableHighAccuracy: true,
+});
