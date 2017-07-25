@@ -42,3 +42,5 @@ navigator.geolocation.getCurrentPosition((position) => {
 }, {
   enableHighAccuracy: true,
 });
+$('.modal')
+  .modal();

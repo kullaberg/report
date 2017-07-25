@@ -11,7 +11,6 @@
   <meta name="theme-color" content="#0d47a1">
   <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
   <script src="js/materialize.min.js" charset="utf-8"></script>
-  <!--<script src="bundle.js"></script>-->
 </head>
 <!--
 ██████   ██████  ██████  ██    ██
@@ -34,13 +33,6 @@
       <div class="nav-wrapper"> <a class="brand-logo"><span class="kullaberg"><img class="left logoImg responsive-img turn" src="img/asterisk.svg" alt="Kullaberg" />Kullaberg Report</span></a>        </div>
     </nav>
   </header>
-  <!--		
-███████  ██████ ██████  ██ ██████  ████████
-██      ██      ██   ██ ██ ██   ██    ██
-███████ ██      ██████  ██ ██████     ██
-     ██ ██      ██   ██ ██ ██         ██
-███████  ██████ ██   ██ ██ ██         ██-->
-  <script src="bundle.js"></script>
   <!--
 ███    ███  █████  ██ ███    ██
 ████  ████ ██   ██ ██ ████   ██
@@ -48,30 +40,18 @@
 ██  ██  ██ ██   ██ ██ ██  ██ ██
 ██      ██ ██   ██ ██ ██   ████
 -->
-  <div class="main row">
+  <main class="main row">
     <div class="">
       <div class="col s12 m6">
         <div class="card">
           <div class="card-content"> <span class="card-title">Report an Issue</span> After you press 'Send'
             your prefered email application will start and you can continue
             to write up your report in detail. We encourage you to attach image
-            and/or video that might aid in the evaluation of your report. Please
-            do not delete the included information we have generated for you
-            in the email. If you are not connected to Wifi, you may save the
-            email on your device until you are ready to send. Thank you for
-            keeping Kullaberg beautiful!</div>
+            and/or video that might aid in the evaluation of your report. Thank
+            you for keeping Kullaberg beautiful!</div>
         </div>
       </div>
     </div>
-    <!-- <section class="col s12 m6 section">
-      <p class="col s12"> <label for="capture1">Capture Image Front: </label><input type="file"
-          accept="image/*" id="capture1" capture="camera"> </p>
-      <p class="col s12">
-      <label for="capture2">Capture Image Side: </label> <input type="file"
-          accept="image/*" id="capture2" capture="camera"> </p>
-      <p class="col s12"><label for="capture3">Capture Image Distance: </label><input type="file"
-          accept="image/*" id="capture3" capture="camera"> </p>
-    </section> -->
     <div class="">
       <div class="col s12 m6">
         <div class="card">
@@ -80,53 +60,76 @@
                 </span> </div>
         </div>
       </div>
-      <!-- <section class="col s12 m6 section"> <label for="textarea1">Your Report</label><textarea id="textarea1" class="materialize-textarea"></textarea></section> -->
       <div id="sendButton" class="col s12 center"> </div>
     </div>
-    <!--
+  </main>
+  <!--
 ███████  ██████   ██████  ████████ ███████ ██████
 ██      ██    ██ ██    ██    ██    ██      ██   ██
 █████   ██    ██ ██    ██    ██    █████   ██████
 ██      ██    ██ ██    ██    ██    ██      ██   ██
 ██       ██████   ██████     ██    ███████ ██   ██
 -->
-    <footer class="page-footer blue darken-4 white-text trails footerAbsolute">
-      <div class="row footerEmbed">
-        <div class="col s12">
-          <div class="col s6 m4 l2">Design <br> <a class="orange-text text-lighten-3 modal-trigger" href="#carlos">Carlos Velasco</a>            </div>
-          <div class="col s6 m4 l2">Sponsors <br> <a class="orange-text text-lighten-3 modal-trigger"
-              href="#skane">Region Skåne</a> <br> <a class="orange-text text-lighten-3 modal-trigger"
-              href="#lansstyrelsen">Lansstyrelsen Skåne</a> </div>
-          <div class="col s6 m4 l2">Language <br> <a class="orange-text text-lighten-3" href="embedSv.html">Svenska</a>            <br> <a class="orange-text text-lighten-3">English</a></div>
-        </div>
+  <footer class="blue darken-4 white-text page-footer">
+    <section id="contact" class="row">
+      <div class="col s10 m12 l6 contactButtons">
+        <a href="mailto:naturum.kullaberg@lansstyrelsen.se?cc=carlos.velasco@lansstyrelsen.se"
+          class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Email: naturum.kullaberg@lansstyrelsen.se"><i class="mdi mdi-email medium grey-text text-lighten-4 contactIcon"></i></a>
+        <a href="tel:46042347056" class="tooltipped" data-position="bottom"
+          data-delay="50" data-tooltip="Tel: +46 (0)42 347 056"> <i class="mdi mdi-phone-classic medium grey-text text-lighten-4 contactIcon"></i></a>
+        <a href="http://www.kullabergsnatur.se/" class="tooltipped onlineOnly"
+          data-position="bottom" data-delay="50" data-tooltip="Website: KullabergsNatur.se"><i class="mdi mdi-web medium grey-text text-lighten-4 contactIcon"></i></a>
+        <a href="https://www.facebook.com/kullabergsnaturreservat/" class="tooltipped onlineOnly"
+          data-position="bottom" data-delay="50" data-tooltip="Facebook: Kullabergs Naturreservat"><i class="mdi mdi-facebook-box medium grey-text text-lighten-4 contactIcon"></i></a>
+        <a href="https://www.instagram.com/kullabergsnaturreservat/" class="tooltipped onlineOnly"
+          data-position="bottom" data-delay="50" data-tooltip="Instagram: naturum Kullaberg"><i class="mdi mdi-instagram medium grey-text text-lighten-4 contactIcon"></i></a>
       </div>
-    </footer>
-    <!--
+    </section>
+    <div class="row">
+      <div class="col s6 m4 l2">Design <br> <a class="orange-text text-lighten-3 modal-trigger" href="#carlos">Carlos Velasco</a>        </div>
+      <div class="col s6 m4 l2">Sponsors <br> <a class="orange-text text-lighten-3 modal-trigger" href="#skane">Region Skåne</a>        <br> <a class="orange-text text-lighten-3 modal-trigger" href="#lansstyrelsen">Lansstyrelsen Skåne</a>        </div>
+      <div class="col s6 m4 l2">Language <br> <a class="orange-text text-lighten-3" href="#">Svenska</a>        <br> <a class="orange-text text-lighten-3">English</a></div>
+    </div>
+  </footer>
+  <!--
 ███    ███  ██████  ██████   █████  ██
 ████  ████ ██    ██ ██   ██ ██   ██ ██
 ██ ████ ██ ██    ██ ██   ██ ███████ ██
 ██  ██  ██ ██    ██ ██   ██ ██   ██ ██
 ██      ██  ██████  ██████  ██   ██ ███████
 -->
-    <div id="skane" class="modal">
-      <div class="modal-content row center-align"> <img src="img/regionSkane.svg" alt="Region Skane" class="responsive-img"
-        /> </div>
-    </div>
-    <div id="lansstyrelsen" class="modal">
-      <div class="modal-content row center-align"> <img src="img/lansstyrelsen.svg" alt="Lansstyrelsen Skane" class="responsive-img"
-        /> </div>
-    </div>
-    <div id="carlos" class="modal">
-      <div class="modal-content row center-align">
-        <div class="col s12">
-          <h2 class="blue-text text-darken-4">Carlos Velasco</h2>
-          <h4 class="flow-text">Front-End JavaScript Application Developer</h4>
-        </div>
-        <div class="col s12">
-          <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Email: Carlos@2ActiveDesign.com"><i class="mdi mdi-email medium"></i></a>
-        </div>
+  <div id="carlos" class="modal">
+    <div class="modal-content row center-align">
+      <div class="col s12">
+        <h2 class="blue-text text-darken-4">Carlos Velasco</h2>
+        <h4 class="flow-text">Front-End JavaScript Application Developer</h4>
       </div>
+      <div class="col s12"> <a href="mailto:Carlos@2ActiveDesign.com" class="tooltipped" data-position="bottom"
+          data-delay="50" data-tooltip="Email: Carlos@2ActiveDesign.com"><i class="mdi mdi-email medium"></i></a>        <a href="https://www.linkedin.com/in/carlosevelasco
+                           " class="tooltipped onlineOnly" data-position="bottom"
+          data-delay="50" data-tooltip="LinkedIn Profile"><i class="mdi mdi-linkedin medium"></i></a>
+        <a href="https://www.behance.net/2Active" class="tooltipped onlineOnly"
+          data-position="bottom" data-delay="50" data-tooltip="Behance Portfolio">
+        <i class="mdi mdi-behance medium"></i> </a> <a href="https://github.com/xtreemze?tab=repositories
+                           " class="tooltipped onlineOnly" data-position="bottom"
+          data-delay="50" data-tooltip="Github Repositories"><i class="mdi mdi-github-box medium"></i></a>        </div>
     </div>
+  </div>
+  <div id="skane" class="modal">
+    <div class="modal-content row center-align"> <img src="img/regionSkane.svg" alt="Region Skane" class="responsive-img"
+      /> </div>
+  </div>
+  <div id="lansstyrelsen" class="modal">
+    <div class="modal-content row center-align"> <img src="img/lansstyrelsen.svg" alt="Lansstyrelsen Skane" class="responsive-img"
+      /> </div>
+  </div>
+  <!--		
+███████  ██████ ██████  ██ ██████  ████████
+██      ██      ██   ██ ██ ██   ██    ██
+███████ ██      ██████  ██ ██████     ██
+     ██ ██      ██   ██ ██ ██         ██
+███████  ██████ ██   ██ ██ ██         ██-->
+  <script src="bundle.js"></script>
 </body>
 
 </html>
