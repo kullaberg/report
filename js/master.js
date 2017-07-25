@@ -14,10 +14,13 @@ navigator.geolocation.getCurrentPosition((position) => {
     `<a target="_blank" href=${mapLink}>${userPosition}</a>`;
   document.getElementById('sendButton')
     .innerHTML =
-    `<a class="btn-large white-text blue waves-light" href="mailto:carlos@2activedesign.com?subject = Report&amp;body = <p><a href=${mapLink}>${userPosition}</a> </p><p>Before sending the email, replace this sentence with your report and attach 3 pictures taken with your phone from the front, side and at a distance.">Send</a>`;
+    `<a class="btn-large white-text blue darken-4 waves-effect waves-light"
+      href="mailto:carlos@2activedesign.com?subject=Kullaberg%20Report&body=Location%3A%0D%0A${mapLink}%0D%0A%0D%0AReport%3A%0D%0A%0D%0A"
+      >Send</a>`;
 }, () => {
   document.getElementById('coordinates')
-    .innerText = 'Error locating your device';
+    .innerText =
+    'We are unable to locate your device. Please describe your location as best you can.';
   if (window.test) {
     const lat = 56.301339399999996;
     const long = 12.452367899999999;
@@ -32,7 +35,9 @@ navigator.geolocation.getCurrentPosition((position) => {
       `<a target="_blank" href=${mapLink}>${userPosition}</a>`;
     document.getElementById('sendButton')
       .innerHTML =
-      `<a class="btn-large white-text blue waves-light" href="mailto:carlos@2activedesign.com?subject=Report&body=${mapLink} ${userPosition} Before sending the email, replace this sentence with your report and attach 3 pictures taken with your phone from the front, side and at a distance.">Send</a>`;
+      `<a class="btn-large white-text blue darken-4 waves-effect waves-light"
+      href="mailto:carlos@2activedesign.com?subject=Kullaberg%20Report&body=Location%3A%0D%0A${mapLink}%0D%0A%0D%0AReport%3A%0D%0A%0D%0A"
+      >Send</a>`;
   }
 }, {
   enableHighAccuracy: true,

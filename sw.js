@@ -48,16 +48,16 @@ var __wpo = {
     "c193deaa915e7183828400922700567900fb6cc3": "./fonts/roboto/Roboto-Regular.woff2",
     "cb8f61464f349af887ba96f6a2ae1e318b3cc8d9": "./fonts/roboto/Roboto-Thin.woff",
     "c321aeb611cf1dcb25717484a4ced717d8ca76fa": "./fonts/roboto/Roboto-Thin.woff2",
-    "6711d66ecfa94af9ded388eb8e81db8b7a6fceb9": "./",
+    "488a16e5c8b3e67f611bc46a3b4258f1f3347430": "./",
     "805db6e929e98fd3deb05cdb2935fc5a33183c15": "./img/asterisk.svg",
     "198f591c1f8640cde2abf40fe49d445650089498": "./img/lansstyrelsen.svg",
     "6704b83793b0f7692c98e616873e05e9a4c3e9d7": "./img/regionSkane.svg",
-    "9f64187ac8a4911fb07fd069007df4dbfb436f10": "./bundle.js",
-    "4e598dd6be3d7c18c499b6d28fed8fc08085560f": "./main.css"
+    "7698e30b03e90f502081f662b22855aba4199d4c": "./bundle.js",
+    "a4d8bb41e81464e893c12774a3a6178e8dfacb65": "./main.css"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-7-24 16:06:41",
+  "version": "2017-7-25 12:29:28",
   "name": "webpack-offline",
   "pluginVersion": "4.8.3",
   "relativePaths": true
