@@ -1,12 +1,12 @@
 var __wpo = {
   "assets": {
     "main": [
-      "./build/vendor.bundle.d0fe82939a2661423bff.js",
-      "./build/entry.bundle.b734d147fb41ed13d8f4.js",
-      "./build/manifest.bundle.45ac8056b29281b77cb1.js",
-      "./build/vendor.bundle.d0fe82939a2661423bff.js.map",
-      "./build/entry.bundle.b734d147fb41ed13d8f4.js.map",
-      "./build/manifest.bundle.45ac8056b29281b77cb1.js.map",
+      "./build/vendor.bundle.45d6dbabcbf1c3ab9cfb.js",
+      "./build/entry.bundle.fe77618f205d17e95299.js",
+      "./build/manifest.bundle.1123aa1d55934ab0bf96.js",
+      "./build/vendor.bundle.45d6dbabcbf1c3ab9cfb.js.map",
+      "./build/entry.bundle.fe77618f205d17e95299.js.map",
+      "./build/manifest.bundle.1123aa1d55934ab0bf96.js.map",
       "./"
     ],
     "additional": [],
@@ -14,17 +14,17 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
-    "fed9d40ef8bd350c417a7fa0bcdad4315ded186b": "./build/vendor.bundle.d0fe82939a2661423bff.js",
-    "3234185c7d00190a23092ea9673cfbe9b658364c": "./build/entry.bundle.b734d147fb41ed13d8f4.js",
-    "fb072d709b7a3f2860c5d51222646ac64228a489": "./build/manifest.bundle.45ac8056b29281b77cb1.js",
-    "4152cda3f8ee52f063e4175e9f4f08cdffe25970": "./build/vendor.bundle.d0fe82939a2661423bff.js.map",
-    "6b8ea4ddb20741f3443d78d691e9bbc699058c80": "./build/entry.bundle.b734d147fb41ed13d8f4.js.map",
-    "b12ca7652c62562688ac250cf4eb1485705eb861": "./build/manifest.bundle.45ac8056b29281b77cb1.js.map",
-    "53e332fddb164408f0a998516050b66ad3a36277": "./"
+    "9821f034031aa6d2bb5e0742b4fcc95153001cdb": "./build/vendor.bundle.45d6dbabcbf1c3ab9cfb.js",
+    "ed3cabb06cc29f29c59c0c1d3dcbf3cbbedc0f1d": "./build/entry.bundle.fe77618f205d17e95299.js",
+    "182f68dc7744e035a51b6e666bade79adc7d59a2": "./build/manifest.bundle.1123aa1d55934ab0bf96.js",
+    "53efebee051f80e4d5e648c57faae68dba09dc41": "./build/vendor.bundle.45d6dbabcbf1c3ab9cfb.js.map",
+    "68ed59c124057a1c034bb925cff506daaf4f8eb1": "./build/entry.bundle.fe77618f205d17e95299.js.map",
+    "18649533af9f4b8b7295dec296f44680dfeea824": "./build/manifest.bundle.1123aa1d55934ab0bf96.js.map",
+    "0e4b247284daec801eae0f9be28e71da4e9cf305": "./"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2017-11-10 10:53:43",
+  "version": "2017-11-10 10:56:48",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true

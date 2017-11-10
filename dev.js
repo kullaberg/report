@@ -10,7 +10,7 @@ module.exports = function e(env) {
         "hammerjs",
         "./node_modules/materialize-css/dist/js/materialize",
         "./node_modules/materialize-css/dist/css/materialize.css",
-        "materialize-css",
+        // "materialize-css",
         "./js/offlineRuntimeInstall"
       ],
       entry: "./entry.js"

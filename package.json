@@ -5,13 +5,18 @@
   "main": "index.html",
   "scripts": {
     "test": "none",
-    "dev": "webpack-dev-server --host localhost --port 8080 --env=dev --inline --hot --profile --open",
-    "hotDebug": "webpack-dev-server --host localhost --port 8080 --env=dev --inline --hot --profile",
-    "debug": "webpack-dev-server --host localhost --port 8080 --env=dev --profile",
-    "net2": "webpack-dev-server --host 192.168.0.130 --port 80 --env=dev --profile --open",
+    "dev":
+      "webpack-dev-server --host localhost --port 8080 --env=dev --inline --hot --profile --open",
+    "hotDebug":
+      "webpack-dev-server --host localhost --port 8080 --env=dev --inline --hot --profile",
+    "debug":
+      "webpack-dev-server --host localhost --port 8080 --env=dev --profile",
+    "net2":
+      "webpack-dev-server --host 192.168.0.130 --port 80 --env=dev --profile --open",
     "watch": "webpack --progress --colors --env=dev --profile --watch",
     "exportp": "node ./js/rmDir.js && webpack --env=prod --profile --progress",
-    "rm": "node ./js/rmDir.js"
+    "rm": "node ./js/rmDir.js",
+    "clean": "node ./js/clean.js && npm i -D && npm up -D"
   },
   "repository": {
     "type": "git",
@@ -23,10 +28,7 @@
     "url": "https://github.com/xtreemze/report/issues"
   },
   "homepage": "https://github.com/xtreemze/report#readme",
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
+  "browserslist": ["> 1%", "last 2 versions"],
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^7.1.6",
@@ -39,7 +41,6 @@
     "html-minifier-webpack-plugin": "^1.1.1",
     "html-webpack-plugin": "^2.30.1",
     "image-webpack-loader": "^3.4.2",
-    "jquery": "^3.2.1",
     "materialize-css": "^0.100.2",
     "offline-plugin": "^4.8.4",
     "postcss": "^6.0.14",
