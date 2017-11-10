@@ -1,6 +1,12 @@
 language: node_js
 node_js:
   - "node"
-  cache:
-  directories:
-    - "node_modules"
+cache:
+directories:
+  - "node_modules"
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: uFQ8zXK88vCxTL7bykK2  # Set in travis-ci.org dashboard
+  on:
+    branch: gh-pages
