@@ -1,10 +1,9 @@
 const OfflinePlugin = require("offline-plugin");
 const webpack = require("webpack");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
-// const ClosureCompiler = require("google-closure-compiler-js").webpack;
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlMinifierPlugin = require("html-minifier-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 //
 module.exports = function e(env) {
   return {
@@ -20,8 +19,10 @@ module.exports = function e(env) {
       entry: "./entry.js"
     },
     output: {
-      path: __dirname,
-      filename: "./build/[name].bundle.[chunkhash].js"
+      path: __dirname + "/public",
+      // publicPath: "./public/",
+      filename: "[name].[chunkhash].js",
+      chunkFilename: "[id].[chunkhash].js"
     },
     stats: {
       warnings: false
@@ -30,14 +31,14 @@ module.exports = function e(env) {
     module: {
       rules: [
         // {
-        //   test: /indexB.html$/,
+        //   test: /\.html$/,
         //   loaders: [
-        //     "file-loader?name=index.[ext]",
+        //     "file-loader",
+        //     // ?name=[path]/[name].[ext]",
         //     "extract-loader",
         //     "html-loader"
         //   ]
         // },
-
         {
           test: /\.css$/,
           use: ["style-loader", "css-loader", "postcss-loader"]
@@ -45,7 +46,7 @@ module.exports = function e(env) {
         {
           test: /\.(gif|png|jpe?g|svg)$/i,
           loaders: [
-            "file-loader?name=build/[name].[hash].[ext]",
+            "file-loader?name=[path]/[name].[hash].[ext]",
             {
               loader: "image-webpack-loader",
               options: {
@@ -92,7 +93,7 @@ module.exports = function e(env) {
     plugins: [
       new HtmlWebpackPlugin({
         title: "Report",
-        template: "indexB.html"
+        template: "./index.html"
       }),
       // ... other plugins
       new webpack.optimize.CommonsChunkPlugin({

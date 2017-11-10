@@ -6,8 +6,6 @@ module.exports = function e(env) {
   return {
     entry: {
       vendor: [
-        "jquery",
-        "hammerjs",
         "./node_modules/materialize-css/dist/js/materialize",
         "./node_modules/materialize-css/dist/css/materialize.css",
         // "materialize-css",
@@ -16,8 +14,10 @@ module.exports = function e(env) {
       entry: "./entry.js"
     },
     output: {
-      path: __dirname,
-      filename: "./build/[name].bundle.[hash].js"
+      path: __dirname + "/public",
+      // publicPath: "./public/",
+      filename: "[name].[hash].js",
+      chunkFilename: "[id].[hash].js"
     },
     stats: {
       warnings: false
@@ -41,7 +41,7 @@ module.exports = function e(env) {
         {
           test: /\.(gif|png|jpe?g|svg)$/i,
           loaders: [
-            "file-loader?name=build/[name].[hash].[ext]",
+            "file-loader?name=[path]/[name].[hash].[ext]",
             {
               loader: "image-webpack-loader",
               options: {
@@ -88,7 +88,7 @@ module.exports = function e(env) {
     plugins: [
       new HtmlWebpackPlugin({
         title: "Report",
-        template: "indexB.html"
+        template: "./index.html"
       }),
       // ... other plugins
       new webpack.optimize.CommonsChunkPlugin({
