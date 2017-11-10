@@ -1,31 +1,15 @@
 CACHE MANIFEST
-#ver:2017-7-25 13:23:45
-#plugin:4.8.3
+#ver:2017-11-10 10:37:25
+#plugin:4.8.4
 
 CACHE:
-../fonts/materialdesignicons-webfont.eot
-../fonts/materialdesignicons-webfont.svg
-../fonts/materialdesignicons-webfont.ttf
-../fonts/materialdesignicons-webfont.woff2
-../fonts/materialdesignicons-webfont.woff
-../fonts/roboto/Roboto-Bold.woff
-../fonts/roboto/Roboto-Bold.woff2
-../fonts/roboto/Roboto-Light.woff
-../fonts/roboto/Roboto-Light.woff2
-../fonts/roboto/Roboto-Medium.woff
-../fonts/roboto/Roboto-Medium.woff2
-../fonts/roboto/Roboto-Regular.woff
-../fonts/roboto/Roboto-Regular.woff2
-../fonts/roboto/Roboto-Thin.woff
-../fonts/roboto/Roboto-Thin.woff2
+../build/entry.bundle.8f141d30a3108a207994.js
+../build/vendor.bundle.2b1e4dad16a216793d63.js
+../build/manifest.bundle.67e7aea03b399c1fbb26.js
+../build/entry.bundle.8f141d30a3108a207994.js.map
+../build/vendor.bundle.2b1e4dad16a216793d63.js.map
+../build/manifest.bundle.67e7aea03b399c1fbb26.js.map
 ../
-../img/asterisk.svg
-../img/lansstyrelsen.svg
-../img/regionSkane.svg
-../bundle.js
-../main.css
-../js/materialize.min.js
-../js/jquery-3.2.1.min.js
 
 NETWORK:
 *

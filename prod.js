@@ -1,156 +1,151 @@
-const ImageminPlugin = require('imagemin-webpack-plugin')
-  .default;
-const HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
-const ClosureCompiler = require('google-closure-compiler-js')
-  .webpack;
-const OfflinePlugin = require('offline-plugin');
-const OptimizeJsPlugin = require('optimize-js-plugin');
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const PurifyCSSPlugin = require('purifycss-webpack');
-const glob = require('glob-all');
+const OfflinePlugin = require("offline-plugin");
+const webpack = require("webpack");
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+// const ClosureCompiler = require("google-closure-compiler-js").webpack;
+const HtmlMinifierPlugin = require("html-minifier-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 //
 module.exports = function e(env) {
   return {
-    entry: './entry.js',
+    entry: {
+      vendor: ["jquery", "hammerjs", "materialize-css"],
+      entry: "./entry.js"
+    },
     output: {
       path: __dirname,
-      filename: 'bundle.js',
+      filename: "./build/[name].bundle.[chunkhash].js"
     },
     stats: {
-      warnings: false,
+      warnings: false
     },
-    devtool: 'cheap-module-source-map',
+    devtool: "cheap-module-source-map",
     module: {
-      rules: [{
-        test: /indexB.html$/,
-        loaders: ['file-loader?name=index.[ext]', 'extract-loader',
-          'html-loader',
-        ],
-      }, {
-        test: /embedEnB.html$/,
-        loaders: ['file-loader?name=embedEn.[ext]',
-          'extract-loader', 'html-loader',
-        ],
-      }, {
-        test: /embedSvB.html$/,
-        loaders: ['file-loader?name=embedSv.[ext]',
-          'extract-loader', 'html-loader',
-        ],
-      }, {
-        test: /mapsB.html$/,
-        loaders: ['file-loader?name=maps.[ext]', 'extract-loader',
-          'html-loader',
-        ],
-      }, {
-        test: /newsB.html$/,
-        loaders: ['file-loader?name=news.[ext]', 'extract-loader',
-          'html-loader',
-        ],
-      }, {
-        test: /poiB.html$/,
-        loaders: ['file-loader?name=poi.[ext]', 'extract-loader',
-          'html-loader',
-        ],
-      }, {
-        test: /mapsBSv.html$/,
-        loaders: ['file-loader?name=mapsSv.[ext]', 'extract-loader',
-          'html-loader',
-        ],
-      }, {
-        test: /newsBSv.html$/,
-        loaders: ['file-loader?name=newsSv.[ext]', 'extract-loader',
-          'html-loader',
-        ],
-      }, {
-        test: /poiBSv.html$/,
-        loaders: ['file-loader?name=poiSv.[ext]', 'extract-loader',
-          'html-loader',
-        ],
-      }, {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader',
-        }),
-      }, {
-        test: /\.(png|gif|jpg)$/,
-        use: ['file-loader?name=[path][name].[ext]'],
-      }, {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=[path][name].[ext]',
-      }, {
-        test: /\.svg$/,
-        use: [{
-          loader: 'file-loader?name=[path][name].[ext]',
-        }],
-      }, {
-        test: /\.js$/,
-        exclude: [/node_modules/],
-        use: [{
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              ['es2015', { modules: false }],
-            ],
-          },
-        }],
-      }],
+      rules: [
+        // {
+        //   test: /indexB.html$/,
+        //   loaders: [
+        //     "file-loader?name=index.[ext]",
+        //     "extract-loader",
+        //     "html-loader"
+        //   ]
+        // },
+
+        {
+          test: /\.css$/,
+          use: ["style-loader", "css-loader", "postcss-loader"]
+        },
+        {
+          test: /\.(gif|png|jpe?g|svg)$/i,
+          loaders: [
+            "file-loader?name=build/[name].[hash].[ext]",
+            {
+              loader: "image-webpack-loader",
+              options: {
+                gifsicle: {
+                  interlaced: false
+                },
+                // optipng: {
+                //   optimizationLevel: 7
+                // },
+                pngquant: {
+                  quality: "65-90",
+                  speed: 4
+                },
+                mozjpeg: {
+                  progressive: true,
+                  quality: 65
+                }
+                // Specifying webp here will create a WEBP version of your JPG/PNG images
+                // webp: {
+                //   quality: 75
+                // }
+              }
+            }
+          ]
+        },
+        {
+          test: /\.(eot|ttf|woff|woff2)$/,
+          loader: "url-loader?limit=1000000"
+        },
+        {
+          test: /\.js$/,
+          exclude: [/node_modules/]
+          // use: [
+          //   {
+          //     loader: "babel-loader?cacheDirectory",
+          //     options: {
+          //       presets: [["env", { modules: false }]]
+          //     }
+          //   }
+          // ]
+        }
+      ]
     },
     plugins: [
-      new ImageminPlugin({
-        pngquant: {
-          quality: '95-100',
-        },
+      new HtmlWebpackPlugin({
+        title: "Report",
+        template: "indexB.html"
       }),
       // ... other plugins
-      new HtmlMinifierPlugin({}),
-      new OptimizeJsPlugin({
-        sourceMap: true,
-      }),
-      new ClosureCompiler({
-        compiler: {
-          language_in: 'ECMASCRIPT6',
-          language_out: 'ECMASCRIPT5',
-          compilation_level: 'ADVANCED',
-          warning_level: 'QUIET',
-          externs: [{ src: `
-                      var jQuery = {};
-                      
-                      var $ = {}  
+      new webpack.optimize.CommonsChunkPlugin({
+        name: "vendor",
+        // filename: "build/vendor.bundle.[chunkhash].js",
+        // (Give the chunk a different name)
 
-                      var Materialize;  
-                      Materialize.toast();
-               ` }],
-        },
-        makeSourceMaps: true,
-        concurrency: 6,
+        minChunks: Infinity
+        // (with more entries, this ensures that no other module
+        //  goes into the vendor chunk)
       }),
-      new ExtractTextPlugin('[name].css'),
-      new PurifyCSSPlugin({
-        minimize: true,
-        verbose: true,
-        // Give paths to parse for rules. These should be absolute!
-        paths: glob.sync([
-          path.join(__dirname, '*.html'),
-          path.join(__dirname, 'js/*.js'),
-        ]),
+      new webpack.optimize.CommonsChunkPlugin({
+        name: "manifest",
+        minChunks: Infinity
       }),
+      new UglifyJSPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true,
+        uglifyOptions: {
+          ecma: 8,
+          output: {
+            comments: false
+          }
+        }
+      }),
+      new HtmlMinifierPlugin({
+        minifyCSS: true,
+        minifyJS: true,
+        removeComments: true,
+        removeEmptyAttributes: true,
+        removeEmtpyElements: true,
+        removeOptionalTags: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeStyleLinkTypeAttributes: true,
+        sortAttributes: true,
+        sortClassName: true,
+        minifyURLs: true,
+        collapseWhitespace: true,
+        collapseInlineTagWhitespace: true,
+        collapseBooleanAttributes: true
+      }),
+
       new OfflinePlugin({
-        externals: ['./js/materialize.min.js',
-          './js/jquery-3.2.1.min.js',
-        ],
-        caches: 'all',
-        responseStrategy: 'network-first',
-        updateStrategy: 'all',
-        minify: 'true',
+        externals: [],
+        caches: "all",
+        // responseStrategy: "network-first",
+        responseStrategy: "cache-first",
+        // updateStrategy: "all",
+        updateStrategy: "changed",
+        minify: "true",
+        autoUpdate: 1000 * 60 * 60 * 2,
         ServiceWorker: {
-          events: 'true',
+          events: "true"
         },
         AppCache: {
-          events: 'true',
-        },
-      }),
-    ],
+          events: "true"
+        }
+      })
+    ]
   };
 };
