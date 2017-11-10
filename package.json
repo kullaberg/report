@@ -4,7 +4,7 @@
   "description": "Reporting for Kullaberg",
   "main": "index.html",
   "scripts": {
-    "test": "none",
+    "test": "node ./js/rmDir.js && webpack --env=prod --profile",
     "dev":
       "webpack-dev-server --host localhost --port 8080 --env=dev --inline --hot --profile --open",
     "hotDebug":
