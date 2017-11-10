@@ -5,7 +5,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = function e(env) {
   return {
     entry: {
-      vendor: ["jquery", "hammerjs", "materialize-css"],
+      vendor: [
+        "jquery",
+        "hammerjs",
+        "./node_modules/materialize-css/dist/js/materialize",
+        "./node_modules/materialize-css/dist/css/materialize.css",
+        "materialize-css",
+        "./js/offlineRuntimeInstall"
+      ],
       entry: "./entry.js"
     },
     output: {
