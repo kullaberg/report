@@ -1,0 +1,22 @@
+CACHE MANIFEST
+#ver:2017-11-13 10:44:52
+#plugin:4.8.4
+
+CACHE:
+../img/lansstyrelsen.svg?14ac55e5c7c2e4abafc011efa7a6818e
+../img/regionSkane.svg?88f194c8700e676371cb8344b6e215b7
+../img/asterisk.svg?591c26a4e965acf3b232cc966801e0ca
+../js/vendor.js?7ddde14d35068ed28e72
+../js/entry.js?87c49339423c3b63d734
+../js/manifest.js?225c620d2a34fc266b96
+../css/vendor.css?7ddde14d35068ed28e72
+../css/entry.css?87c49339423c3b63d734
+../js/vendor.js.map?7ddde14d35068ed28e72
+../css/vendor.css.map?7ddde14d35068ed28e72
+../js/entry.js.map?87c49339423c3b63d734
+../css/entry.css.map?87c49339423c3b63d734
+../js/manifest.js.map?225c620d2a34fc266b96
+../
+
+NETWORK:
+*
