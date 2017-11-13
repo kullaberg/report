@@ -9,11 +9,8 @@ module.exports = function e(env) {
   return {
     entry: {
       vendor: [
-        // "jquery",
-        // "hammerjs",
         "./node_modules/materialize-css/dist/js/materialize",
         "./node_modules/materialize-css/dist/css/materialize.css",
-        // "materialize-css",
         "./app/js/offlineRuntimeInstall"
       ],
       entry: "./app/entry.js"
@@ -30,15 +27,6 @@ module.exports = function e(env) {
     devtool: "cheap-module-source-map",
     module: {
       rules: [
-        // {
-        //   test: /\.html$/,
-        //   loaders: [
-        //     "file-loader",
-        //     // ?name=[path]/[name].[ext]",
-        //     "extract-loader",
-        //     "html-loader"
-        //   ]
-        // },
         {
           test: /\.css$/,
           use: ExtractTextPlugin.extract({
@@ -93,14 +81,6 @@ module.exports = function e(env) {
         {
           test: /\.js$/,
           exclude: [/node_modules/]
-          // use: [
-          //   {
-          //     loader: "babel-loader?cacheDirectory",
-          //     options: {
-          //       presets: [["env", { modules: false }]]
-          //     }
-          //   }
-          // ]
         }
       ]
     },
@@ -110,16 +90,10 @@ module.exports = function e(env) {
         template: "./app/index.ejs"
       }),
       new ExtractTextPlugin("./css/[name].css?[chunkhash]"),
-      // ... other plugins
-      // ... other plugins
       new webpack.optimize.CommonsChunkPlugin({
         name: "vendor",
-        // filename: "build/vendor.bundle.[chunkhash].js",
-        // (Give the chunk a different name)
 
         minChunks: Infinity
-        // (with more entries, this ensures that no other module
-        //  goes into the vendor chunk)
       }),
       new webpack.optimize.CommonsChunkPlugin({
         name: "manifest",
