@@ -21,8 +21,8 @@ module.exports = function e(env) {
     output: {
       path: __dirname + "/public",
       // publicPath: "./public/",
-      filename: "./1/[name].js?[chunkhash]",
-      chunkFilename: "./1/[id].js?[chunkhash]"
+      filename: "./js/[name].js?[chunkhash]",
+      chunkFilename: "./1/js/[id].js?[chunkhash]"
     },
     stats: {
       warnings: false
@@ -60,7 +60,7 @@ module.exports = function e(env) {
         {
           test: /\.(gif|png|jpe?g|svg)$/i,
           loaders: [
-            "file-loader?name=./1/[name].[ext]?[hash]",
+            "file-loader?name=./img/[name].[ext]?[hash]",
             {
               loader: "image-webpack-loader",
               options: {
@@ -109,7 +109,7 @@ module.exports = function e(env) {
         title: "Report",
         template: "./app/index.ejs"
       }),
-      new ExtractTextPlugin("./1/[name].css?[chunkhash]"),
+      new ExtractTextPlugin("./css/[name].css?[chunkhash]"),
       // ... other plugins
       // ... other plugins
       new webpack.optimize.CommonsChunkPlugin({

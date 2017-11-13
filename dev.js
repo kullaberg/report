@@ -16,8 +16,8 @@ module.exports = function e(env) {
     output: {
       path: __dirname + "/public",
       // publicPath: "./public/",
-      filename: "./1/[name].js?[hash]",
-      chunkFilename: "./1/[id].js?[hash]"
+      filename: "./js/[name].js?[hash]",
+      chunkFilename: "./js/[id].js?[hash]"
     },
     stats: {
       warnings: false
@@ -41,7 +41,7 @@ module.exports = function e(env) {
         {
           test: /\.(gif|png|jpe?g|svg)$/i,
           loaders: [
-            "file-loader?name=./1/[name].[ext]?[hash]",
+            "file-loader?name=./img/[name].[ext]?[hash]",
             {
               loader: "image-webpack-loader",
               options: {
