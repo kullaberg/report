@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2017-11-13 10:50:44
+#ver:2017-11-13 11:43:13
 #plugin:4.8.4
 
 CACHE:
@@ -8,14 +8,14 @@ CACHE:
 ../img/asterisk.svg?591c26a4e965acf3b232cc966801e0ca
 ../js/vendor.js?46da1be8c48e61ef6a6a
 ../js/entry.js?b2bbcb6d7b30578d26fa
-../js/manifest.js?c2d5bc2aa3544c201a07
+../js/manifest.js?5172a185cbb63026072b
 ../css/vendor.css?46da1be8c48e61ef6a6a
 ../css/entry.css?b2bbcb6d7b30578d26fa
 ../js/vendor.js.map?46da1be8c48e61ef6a6a
 ../css/vendor.css.map?46da1be8c48e61ef6a6a
 ../js/entry.js.map?b2bbcb6d7b30578d26fa
 ../css/entry.css.map?b2bbcb6d7b30578d26fa
-../js/manifest.js.map?c2d5bc2aa3544c201a07
+../js/manifest.js.map?5172a185cbb63026072b
 ../
 
 NETWORK:
