@@ -19,7 +19,7 @@ module.exports = function e(env) {
       path: __dirname + "/public",
       // publicPath: "./public/",
       filename: "./js/[name].js?[chunkhash]",
-      chunkFilename: "./1/js/[id].js?[chunkhash]"
+      chunkFilename: "./js/[id].js?[chunkhash]"
     },
     stats: {
       warnings: false
