@@ -9,15 +9,15 @@ module.exports = function e(env) {
         "./node_modules/materialize-css/dist/js/materialize",
         "./node_modules/materialize-css/dist/css/materialize.css",
         // "materialize-css",
-        "./js/offlineRuntimeInstall"
+        "./app/js/offlineRuntimeInstall"
       ],
-      entry: "./entry.js"
+      entry: "./app/entry.js"
     },
     output: {
       path: __dirname + "/public",
       // publicPath: "./public/",
-      filename: "[name].[hash].js",
-      chunkFilename: "[id].[hash].js"
+      filename: "./1/[name].js?[hash]",
+      chunkFilename: "./1/[id].js?[hash]"
     },
     stats: {
       warnings: false
@@ -41,7 +41,7 @@ module.exports = function e(env) {
         {
           test: /\.(gif|png|jpe?g|svg)$/i,
           loaders: [
-            "file-loader?name=[path]/[name].[hash].[ext]",
+            "file-loader?name=./1/[name].[ext]?[hash]",
             {
               loader: "image-webpack-loader",
               options: {
@@ -88,7 +88,7 @@ module.exports = function e(env) {
     plugins: [
       new HtmlWebpackPlugin({
         title: "Report",
-        template: "./index.html"
+        template: "./app/index.ejs"
       }),
       // ... other plugins
       new webpack.optimize.CommonsChunkPlugin({

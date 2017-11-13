@@ -14,9 +14,10 @@
     "net2":
       "webpack-dev-server --host 192.168.0.130 --port 80 --env=dev --profile --open",
     "watch": "webpack --progress --colors --env=dev --profile --watch",
-    "exportp": "node ./js/rmDir.js && webpack --env=prod --profile --progress",
-    "rm": "node ./js/rmDir.js",
-    "clean": "node ./js/clean.js && npm i -D && npm up -D"
+    "exportp":
+      "node ./app/js/rmDir.js && webpack --env=prod --profile --progress",
+    "rm": "node ./app/js/rmDir.js",
+    "clean": "node ./app/js/clean.js && npm i -D && npm up -D"
   },
   "repository": {
     "type": "git",

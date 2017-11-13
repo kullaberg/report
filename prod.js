@@ -14,15 +14,15 @@ module.exports = function e(env) {
         "./node_modules/materialize-css/dist/js/materialize",
         "./node_modules/materialize-css/dist/css/materialize.css",
         // "materialize-css",
-        "./js/offlineRuntimeInstall"
+        "./app/js/offlineRuntimeInstall"
       ],
-      entry: "./entry.js"
+      entry: "./app/entry.js"
     },
     output: {
       path: __dirname + "/public",
       // publicPath: "./public/",
-      filename: "[name].[chunkhash].js",
-      chunkFilename: "[id].[chunkhash].js"
+      filename: "./1/[name].js?[chunkhash]",
+      chunkFilename: "./1/[id].js?[chunkhash]"
     },
     stats: {
       warnings: false
@@ -41,12 +41,26 @@ module.exports = function e(env) {
         // },
         {
           test: /\.css$/,
-          use: ["style-loader", "css-loader", "postcss-loader"]
+          use: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: [
+              {
+                loader: "css-loader",
+                options: {
+                  autoprefixer: false,
+                  minimize: true,
+                  sourceMap: true,
+                  importLoaders: 1
+                }
+              },
+              "postcss-loader"
+            ]
+          })
         },
         {
           test: /\.(gif|png|jpe?g|svg)$/i,
           loaders: [
-            "file-loader?name=[path]/[name].[hash].[ext]",
+            "file-loader?name=./1/[name].[ext]?[hash]",
             {
               loader: "image-webpack-loader",
               options: {
@@ -93,8 +107,10 @@ module.exports = function e(env) {
     plugins: [
       new HtmlWebpackPlugin({
         title: "Report",
-        template: "./index.html"
+        template: "./app/index.ejs"
       }),
+      new ExtractTextPlugin("./1/[name].css?[chunkhash]"),
+      // ... other plugins
       // ... other plugins
       new webpack.optimize.CommonsChunkPlugin({
         name: "vendor",
